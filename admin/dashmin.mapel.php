@@ -182,7 +182,11 @@ $newkbm = new kbm; ?>
                                                 <td> <?php echo $data['jumlah_guru'];?> Guru |     
 
                                    <a class="edit" href="dashmin.kbm.php?nama_mapel=<?php echo $data['nama_mapel']; ?>"> Lihat</a>                      </td>
-                                                <td>  <a class="edit" href="dashmin.emapel.php?id_mapel=<?php echo $data['id_mapel']; ?>"> Edit</a>                      </td>
+                                                <td>  
+													<a class="edit" href="dashmin.emapel.php?id_mapel=<?php echo $data['id_mapel']; ?>"> Edit</a> | 
+													<a class="edit" href="dashmin.dmapel.php?id_mapel=<?php echo $data['id_mapel']; ?>">Delete</a>
+													
+												</td>
                                             </tr>
 
 

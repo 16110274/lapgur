@@ -144,7 +144,7 @@ $newguru = new guru;
                                         <h4 class="header-title">Tambah MAPEL</h4>
 
 
-                                        <form method="post" action="tambahguru.php">
+                                        <form method="post" action="dashmin.tmapel">
                                         <div class="form-group">
                                      
                                          
@@ -152,19 +152,19 @@ $newguru = new guru;
                                         <input name="nama" class="form-control" type="text" value="" id="example-text-input">          
 
                                         <label for="example-search-input" class="col-form-label">KD 1 : </label>                                                                                  
-                                        <input name="nama" class="form-control" type="text" value="" id="example-text-input">   
+                                        <input name="kd1" class="form-control" type="text" value="" id="example-text-input">   
 
                                          <label for="example-search-input" class="col-form-label">KD 2 : </label>                                                                                  
-                                        <input name="nama" class="form-control" type="text" value="" id="example-text-input">   
+                                        <input name="kd2" class="form-control" type="text" value="" id="example-text-input">   
 
                                         <label for="example-search-input" class="col-form-label">KD 3 :  </label>                                                                                  
-                                        <input name="nama" class="form-control" type="text" value="" id="example-text-input">   
+                                        <input name="kd3" class="form-control" type="text" value="" id="example-text-input">   
 
                                         <label for="example-search-input" class="col-form-label">KD 4 :  </label>                                                                                  
-                                        <input name="nama" class="form-control" type="text" value="" id="example-text-input">   
+                                        <input name="kd4" class="form-control" type="text" value="" id="example-text-input">   
 
                                         <label for="example-search-input" class="col-form-label">KD 5 :  </label>                                                                                  
-                                        <input name="nama" class="form-control" type="text" value="" id="example-text-input">
+                                        <input name="kd5" class="form-control" type="text" value="" id="example-text-input">
                             
 
                                         </div>
@@ -174,6 +174,30 @@ $newguru = new guru;
                                       <button name="submit" type="submit" class="btn btn-primary mb-3">TAMBAH</button>
 
                                       </form>
+									  
+<?php
+
+if(isset($_POST['submit']))
+
+{
+$nama = $_POST['nama'];
+$kd1 = $_POST['kd1'];
+$kd2 = $_POST['kd2'];
+$kd3 = $_POST['kd3'];
+$kd4 = $_POST['kd4'];
+$kd5 = $_POST['kd5'];
+
+mysqli_query($koneksi,"INSERT INTO `mapel` (`id_mapel`, `nama_mapel`, `kd1`, `kd2`, `kd3`, `kd4`, `kd5`) VALUES (NULL, '$nama', '$kd1', '$kd2', '$kd3', '$kd4', '$kd5')");
+
+echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Succesfully Updated');
+    window.location.href='dashmin.mapel';
+    </script>");
+
+
+}
+
+?>
 
             
 

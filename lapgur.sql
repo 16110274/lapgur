@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2018 at 09:54 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Generation Time: Dec 22, 2018 at 02:19 AM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -875,7 +875,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `daftar_mapel`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `daftar_mapel`  AS  select `mapel`.`id_mapel` AS `id_mapel`,`mapel`.`nama_mapel` AS `nama_mapel`,`mapel`.`kd1` AS `kd1`,`mapel`.`kd2` AS `kd2`,`mapel`.`kd3` AS `kd3`,`mapel`.`kd4` AS `kd4`,`mapel`.`kd5` AS `kd5`,count(`mapel`.`id_mapel`) AS `jumlah_guru`,`periode`.`semester` AS `semester`,`periode`.`tahunajar` AS `tahunajar` from (((`kb` join `mapel` on((`mapel`.`id_mapel` = `kb`.`id_mapel`))) join `guru` on((`guru`.`id_guru` = `kb`.`id_guru`))) join `periode` on((`periode`.`id_periode` = `kb`.`id_periode`))) group by `mapel`.`id_mapel` ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `daftar_mapel`  AS  select `mapel`.`id_mapel` AS `id_mapel`,`mapel`.`nama_mapel` AS `nama_mapel`,`mapel`.`kd1` AS `kd1`,`mapel`.`kd2` AS `kd2`,`mapel`.`kd3` AS `kd3`,`mapel`.`kd4` AS `kd4`,`mapel`.`kd5` AS `kd5`,count(`guru`.`id_guru`) AS `jumlah_guru`,`periode`.`semester` AS `semester`,`periode`.`tahunajar` AS `tahunajar` from (((`mapel` left join `kb` on((`mapel`.`id_mapel` = `kb`.`id_mapel`))) left join `guru` on((`guru`.`id_guru` = `kb`.`id_guru`))) left join `periode` on((`periode`.`id_periode` = `kb`.`id_periode`))) group by `mapel`.`id_mapel` ;
 
 -- --------------------------------------------------------
 
@@ -1041,7 +1041,7 @@ ALTER TABLE `wali`
 -- AUTO_INCREMENT for table `kb`
 --
 ALTER TABLE `kb`
-  MODIFY `id_kb` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_kb` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `kbm`
