@@ -174,7 +174,10 @@ $newkbm = new kbm; ?>
                                    <td><?php echo $data['nama_jurusan'];  ?></td>                                   
                                    <td><?php echo $data['tahunajar'];  ?></td>
                                    <td><?php echo $data['jumlah_siswa'];   ?>  | <a class="edit" href="dashmin.siswa.php?id_kelas=<?php echo $data['id_kelas']; ?>"> Lihat</a>  </td>
-                                   <td><?php echo $data['nama_wali'];  ?> | <a class="edit" href="dashmin.ekelas.php?id_kelas=<?php echo $data['id_kelas']; ?>"> Edit</a></td>
+								   
+                                   <td><?php echo $data['nama_wali'];  ?> | 
+								   <a class="edit" href="dashmin.ekelas.php?id_kelas=<?php echo $data['id_kelas']; ?>"> Edit</a>
+								   </td>
        
                                                
 
