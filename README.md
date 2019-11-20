@@ -1,5 +1,6 @@
-# Aplikasi Sistem Informasi Laporan Guru
-# LapGur
+# Sistem Informasi Laporan Guru
+
+Dibuat dengan bootstrap dan native PHP
 
 ## Screenshot : 
 <img src="https://github.com/16110274/lapgur/blob/master/screenshot/1.PNG" width="256">&nbsp;
