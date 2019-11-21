@@ -1,9 +1,11 @@
-# Sistem Informasi Laporan Guru
+# LAPGUR - Laporan Guru
+Lapgur pada dasarnya adalah aplikasi Sistem Informasi Laporan Guru berbasis web yang dibuat dengan bahasa pemograman PHP dan framework bootstrap.
 
-Dibuat dengan bootstrap dan native PHP
+# Admin Panel Template
+Srtdash
 
 ## Screenshot : 
-<img src="https://github.com/16110274/lapgur/blob/master/screenshot/1.PNG" width="256">&nbsp;
-<img src="https://github.com/16110274/lapgur/blob/master/screenshot/2.PNG" width="256">&nbsp;
-<img src="https://github.com/16110274/lapgur/blob/master/screenshot/3.png" width="256">&nbsp;
-<img src="https://github.com/16110274/lapgur/blob/master/screenshot/4.png" width="256">
+<img src="https://github.com/16110274/lapgur/blob/master/screenshot/1.PNG">&nbsp <br>
+<img src="https://github.com/16110274/lapgur/blob/master/screenshot/2.PNG">&nbsp <br>
+<img src="https://github.com/16110274/lapgur/blob/master/screenshot/3.png">&nbsp <br>
+<img src="https://github.com/16110274/lapgur/blob/master/screenshot/4.png">
